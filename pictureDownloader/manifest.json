@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "Picture Downloader",
+    "description":"照片選擇下載器，目前支援下載JPG格式，例如Twitter, Modelpress",
+    "version": "1.0",
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": ["jquery-3.5.1.min.js", "content.js"],
+        "css":["popup.css"]
+    }],
+    "icons": {
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup":"popup.html"
+    },
+    "permissions":[
+        "activeTab",
+        "tabs",
+        "downloads"
+    ],
+    "web_accessible_resources": [
+        "popup.css"
+      ]
+
+}
