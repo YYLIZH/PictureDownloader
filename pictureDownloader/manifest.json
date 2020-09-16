@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Picture Downloader",
-    "description":"照片選擇下載器，目前支援下載JPG,PNG格式，例如Twitter, Modelpress",
+    "description":"照片選擇下載器，目前支援下載JPG,PNG,JPEG格式，例如Twitter, Modelpress",
     "version": "1.1",
     "content_scripts": [{
         "matches": [

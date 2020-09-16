@@ -6,7 +6,9 @@ document.querySelector("button").onclick = function () {
             var message = ["hello", "jpg"];
         } else if (document.getElementById("png").checked) {
             var message = ["hello", "png"];
-        }
+        } else if (document.getElementById("jpeg").checked) {
+            var message = ["hello", "jpeg"];
+        }   
         chrome.tabs.sendMessage(tabs[0].id, {greeting: message});
     });
 };

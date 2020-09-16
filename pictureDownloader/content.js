@@ -11,7 +11,7 @@ function retrieveImgUrl(format) {
     for (var i = 0; i < imgs.length; i++) {
         var url = imgs[i].src;
         if (url.indexOf(format) !== -1) {
-            pictureURLs.push(url.slice(0,url.indexOf(format)+3));
+            pictureURLs.push(url.slice(0,url.indexOf(format)+format.length));
         }
     }
     return pictureURLs;
