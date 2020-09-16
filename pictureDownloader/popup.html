@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,19 @@
     <link rel="stylesheet" href="popup.css">
     <script src="jquery-3.5.1.min.js"></script>
 </head>
+
 <body>
     <h1>Photo Downloader</h1>
+    <div>
+        <label>選擇下載格式</label>
+        <label><input type="radio" name="format" id="png" value="png">png</label>
+        <label><input type="radio" name="format" id="jpg" value="jpg">jpg</label>
+    </div>
+    </br>
     <div id="result"></div>
     <button id="Grab">Grab</button>
     <button id="Download" style="display: none;">Download</button>
     <script src="popup.js"></script>
 </body>
+
 </html>

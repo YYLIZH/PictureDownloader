@@ -1,8 +1,16 @@
+
+
 document.querySelector("button").onclick = function () {
     chrome.tabs.query({active: true,currentWindow: true}, function (tabs) {
-        chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"});
+        if (document.getElementById("jpg").checked) {
+            var message = ["hello", "jpg"];
+        } else if (document.getElementById("png").checked) {
+            var message = ["hello", "png"];
+        }
+        chrome.tabs.sendMessage(tabs[0].id, {greeting: message});
     });
 };
+
 
 
 chrome.runtime.onMessage.addListener(
